@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: oltp
+    schema: oltp
+    tables:
+      - name: stores
+        description: "Source table for store information"
+
+models:
+  - name: stg_stores
+    description: Staging model for stores data
+    columns:
+      - name: store_id
+        description: Primary key for the store
+      - name: store_name
+        description: Name of the store
+      - name: district
+        description: District the store is in
+      - name: region
+        description: Region of the store
+      - name: open_date
+        description: Store opening date
+      - name: remodel_date
+        description: Date of the last remodel
+      - name: store_type
+        description: Type or category of the store

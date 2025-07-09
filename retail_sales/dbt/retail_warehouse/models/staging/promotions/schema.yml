@@ -1,0 +1,23 @@
+version: 2
+sources:
+  - name: oltp
+    schema: oltp
+    tables:
+      - name: promotions
+        description: "Source table for promotions information"
+models:
+  - name: stg_promotions
+    description: Staging model for promotions data
+    columns:
+      - name: promotion_id
+        description: Primary key for the promotion
+      - name: promotion_name
+        description: Name of the promotion
+      - name: media_type
+        description: Type of media used for the promotion
+      - name: start_date
+        description: Start date of the promotion
+      - name: end_date
+        description: End date of the promotion
+      - name: discount_pct
+        description: Discount percentage offered in the promotion
