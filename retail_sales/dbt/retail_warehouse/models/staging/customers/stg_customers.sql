@@ -1,4 +1,4 @@
-{{ config(materialized='view') }}
+{{ config(materialized='view', schema='oltp') }}
 
 WITH customers_source AS (
     SELECT

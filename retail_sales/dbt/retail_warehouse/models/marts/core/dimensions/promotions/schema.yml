@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_promotions
+    description: "Promotion dimension with surrogate key"
+    columns:
+      - name: promotion_sk
+        description: "Surrogate key for promotion"
+        tests: [not_null, unique]
+      - name: promotion_id
+        description: "Source promotion id"
+      - name: promotion_name
+      - name: media_type
+      - name: discount_pct
+      - name: start_date
+      - name: end_date
