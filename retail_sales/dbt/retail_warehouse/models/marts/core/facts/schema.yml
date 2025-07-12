@@ -43,7 +43,7 @@ models:
       - name: sales_amount
 
   - name: fct_promotion_eligibility
-    description: "Factless fact table recording eligibility of products for promotions in each store on each date"
+    description: "Factless fact table recording eligibility of promotions in each store on each date"
     columns:
       - name: date_sk
         tests:
@@ -51,13 +51,6 @@ models:
           - relationships:
               to: ref('dim_date')
               field: date_sk
-
-      - name: product_sk
-        tests:
-          - not_null
-          - relationships:
-              to: ref('dim_products')
-              field: product_sk
 
       - name: promotion_sk
         tests:
