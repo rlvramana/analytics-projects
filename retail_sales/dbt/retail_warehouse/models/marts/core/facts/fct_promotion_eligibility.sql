@@ -1,12 +1,19 @@
 {{ config(materialized='table') }}
 
--- Factless fact table: tracks product promotion eligibility per store and date
-select 
-    d.date_sk,
-    p.product_sk,
-    pr.promotion_sk,
-    s.store_sk
-from {{ ref('dim_promotions') }} pr
-join {{ ref('dim_products') }} p     on 1=1
-join {{ ref('dim_stores') }} s       on 1=1
-join {{ ref('dim_date') }} d         on d.full_date between pr.start_date and pr.end_date
+-- generate one row per date the promotion is active
+with promo_calendar as (
+
+    select
+        p.promotion_sk,
+        d.date_sk
+    from {{ ref('dim_promotions') }} p
+    join {{ ref('dim_date') }} d
+      on d.full_date between p.start_date and p.end_date
+
+)
+
+select
+    date_sk,
+    promotion_sk
+from promo_calendar
+order by promotion_sk, date_sk
