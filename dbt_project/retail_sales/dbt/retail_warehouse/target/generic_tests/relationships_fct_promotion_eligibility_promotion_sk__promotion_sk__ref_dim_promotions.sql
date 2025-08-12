@@ -1,1 +1,0 @@
-{{ test_relationships(column_name="promotion_sk", field="promotion_sk", model=get_where_subquery(ref('fct_promotion_eligibility')), to=ref('dim_promotions')) }}
