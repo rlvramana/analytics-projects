@@ -1,0 +1,31 @@
+-- 005_create_panelist_demographics.sql
+
+CREATE TABLE IF NOT EXISTS panelist_demographics (
+    panelist_id TEXT,
+    instance_id TEXT,
+    age INT,
+    postal_code TEXT,
+    country TEXT,
+    state TEXT,
+    dma TEXT,
+    dma_code TEXT,
+    region TEXT,
+    gender TEXT,
+    gender_id INT,
+    ethnicity TEXT,
+    ethnicity_id INT,
+    hispanic TEXT,
+    hispanic_id INT,
+    education TEXT,
+    education_id INT,
+    income TEXT,
+    income_id INT,
+    employment TEXT,
+    employment_id INT,
+    industry TEXT,
+    industry_id INT,
+    occupation TEXT,
+    occupation_id INT,
+    kids_in_household TEXT,
+    kids_in_household_id INT
+);

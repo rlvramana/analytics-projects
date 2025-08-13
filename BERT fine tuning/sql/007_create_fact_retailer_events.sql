@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS fact_retailer_events (
+id SERIAL PRIMARY KEY,
+event_id TEXT,
+panelist_id TEXT REFERENCES dim_panelist(panelist_id),
+event_name TEXT,
+event_type TEXT,
+start_time_local TIMESTAMP,
+end_time_local TIMESTAMP,
+search_term TEXT,
+page_view_id TEXT,
+product_id TEXT,
+product_name TEXT,
+purchase_price NUMERIC,
+purchase_quantity INT,
+retailer_property_name TEXT,
+currency TEXT,
+source_file TEXT,
+load_status TEXT,
+brand TEXT,
+product_category TEXT
+);

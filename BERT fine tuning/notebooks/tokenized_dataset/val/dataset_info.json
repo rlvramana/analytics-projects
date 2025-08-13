@@ -1,0 +1,53 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "product_name_raw": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "labels": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "cleaned_product_name": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "split_type": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "iteration": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "__index_level_0__": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "input_ids": {
+      "feature": {
+        "dtype": "int32",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "token_type_ids": {
+      "feature": {
+        "dtype": "int8",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "attention_mask": {
+      "feature": {
+        "dtype": "int8",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

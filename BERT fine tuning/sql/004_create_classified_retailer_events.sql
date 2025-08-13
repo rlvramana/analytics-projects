@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS classified_retailer_events (
+    event_id TEXT,
+    panelist_id TEXT,
+    event_name TEXT,
+    event_type TEXT,
+    start_time_local TEXT,
+    end_time_local TEXT,
+    search_term TEXT,
+    page_view_id TEXT,
+    product_id TEXT,
+    product_name TEXT,
+    purchase_price TEXT,
+    purchase_quantity TEXT,
+    retailer_property_name TEXT,
+    currency TEXT,
+    source_file TEXT,
+    load_status TEXT,
+    normalized_product TEXT,
+    fashion_flag BOOLEAN,
+    classified_timestamp TIMESTAMP DEFAULT NOW()
+);
